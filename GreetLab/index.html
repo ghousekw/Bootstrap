@@ -17,7 +17,7 @@
       crossorigin="anonymous"
     />
     <link rel="stylesheet" href="css/style.css" />
-    <title>Bootstrap Theme</title>
+    <title>GreetLabs</title>
   </head>
 
   <body data-spy="scroll" data-target="#main-nav" id="home">
@@ -36,7 +36,7 @@
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarCollapse">
-          <ul class="navbar-nav m1-auto">
+          <ul class="navbar-nav ml-auto">
             <li class="navbar-item">
               <a href="#home" class="nav-link">Home</a>
             </li>
@@ -406,6 +406,13 @@
           );
         }
       });
+    
+    //Auto-hide navbar after click 
+    $(document).on('click','.navbar-collapse',function(event) {
+        if( $(event.target).is('a') ) {
+            $(this).collapse('hide');
+        }
+    });
     </script>
   </body>
 </html>
